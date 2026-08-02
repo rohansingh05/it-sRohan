@@ -26,7 +26,7 @@ const corsOptions = {
   optionsSuccessStatus: 200
 };
 
-// 1. Enable CORS for ALL routes and handle OPTIONS preflights automatically
+// 1. Enable CORS for ALL routes
 app.use(cors(corsOptions));
 
 // 2. Parse JSON bodies
@@ -37,13 +37,18 @@ app.get('/', (req, res) => {
   res.status(200).json({ status: 'success', message: 'Backend API is running!' });
 });
 
-// Transport setup for email
+// Transporter setup for email using Port 587 (Explicit SMTP with STARTTLS)
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 587,
+  secure: false, // true for port 465, false for 587
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS
-  }
+  },
+  connectionTimeout: 10000, // 10s connection timeout for cloud hosts
+  greetingTimeout: 5000,
+  socketTimeout: 10000
 });
 
 // Contact Route
@@ -58,7 +63,7 @@ app.post('/api/contact', async (req, res) => {
     await transporter.sendMail({
       from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`, // MUST be your authenticated Gmail!
       to: 'rohan03cse@gmail.com',                               // Destination inbox
-      replyTo: email,                                          // Replying to email goes to visitor
+      replyTo: email,                                          // Replying goes to the visitor
       subject: `New Contact Request from ${name}`,
       html: `
         <h3>New Portfolio Message</h3>
