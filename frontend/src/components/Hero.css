@@ -1,0 +1,145 @@
+/* Hero.css */
+*{
+  margin: 0;
+  padding: 0;
+}
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 4rem); 
+  
+  /* The new gradient background */
+  background: var(--bg-hero);
+  
+  color: var(--text);
+  text-align: center;
+  padding: 2rem 1rem;
+  /* margin-top: 4rem; */
+}
+
+.hero-content {
+  max-width: 800px;
+  width: 100%;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.5rem;
+}
+
+.hero-title span {
+  color: var(--name-color); /* A nice blue highlight for your name */
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+  margin: 0 auto 2.5rem auto;
+  max-width: 600px;
+}
+
+/* Button Layout */
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  width: 100%;
+  max-width: 250px;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+  border: 2px solid #2563eb;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text);
+  border: 2px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-download);
+
+}
+
+/* --- Hero Social Links --- */
+.hero-socials {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.social-link {
+  color: var(--bg-link); /* Muted gray */
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link:hover {
+  color: #3b82f6; /* Turns blue on hover */
+  transform: translateY(-4px); /* Slight lift effect */
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  fill: currentColor; /* Inherits the color from .social-link so the hover effect works */
+}
+
+/* --- Responsive Media Queries --- */
+
+/* For tablets and larger screens */
+@media (min-width: 640px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: row; /* Puts buttons side-by-side on larger screens */
+  }
+
+  .btn {
+    width: auto; /* Buttons only take up as much space as they need */
+  }
+}

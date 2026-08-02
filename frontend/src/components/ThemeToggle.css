@@ -1,0 +1,48 @@
+/* src/components/ThemeToggle.css */
+
+.theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+  box-shadow: var(--shadow);
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.1);
+  border-color: var(--accent-color);
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.95);
+}
+
+/* Icon Styles */
+.theme-icon {
+  font-size: 1.25rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.sun-icon {
+  color: #f59e0b; /* Warm Amber/Yellow */
+}
+
+.moon-icon {
+  color: #6366f1; /* Indigo */
+}
+
+/* Optional hover rotation for smooth polish */
+.theme-toggle-btn:hover .sun-icon {
+  transform: rotate(20deg);
+}
+
+.theme-toggle-btn:hover .moon-icon {
+  transform: rotate(-15deg);
+}

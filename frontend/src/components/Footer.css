@@ -1,0 +1,40 @@
+/* Footer.css */
+
+.footer-section {
+  background-color: #0f172a; /* Deep dark background to anchor the page */
+  color: #9ca3af; /* Muted gray text */
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 1px solid #1f2937; /* Subtle line to separate from the Contact section */
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.footer-text {
+  margin: 0;
+}
+
+.footer-highlight {
+  color: #3b82f6; /* Your signature blue */
+  font-weight: 600;
+}
+
+/* Optional: small pulse animation for a heart icon if you want to say "Built with ♥" */
+.heart {
+  color: #ef4444;
+  display: inline-block;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}

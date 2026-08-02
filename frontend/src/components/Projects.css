@@ -1,0 +1,134 @@
+/* Projects.css */
+
+.projects-section {
+  background-color: var(--bg-section);
+  color: var(--text);
+  padding: 5rem 2rem;
+  min-height: calc(100vh - 8rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.projects-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.projects-header p{
+  color: var(--text-muted);
+}
+
+/* --- Responsive Grid --- */
+.projects-grid {
+  display: grid;
+  /* This automatically handles responsiveness without media queries! */
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(350px, 1fr);
+  gap: 2rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+  scrollbar-width: none;
+}
+
+/* --- Project Card Styling --- */
+.project-card {
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: var(--bg-card); /* Slightly lighter card to pop off the background */
+  border-radius: 1.25rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+  border-color: var(--accent-color); /* Subtle blue border on hover */
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.project-description {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1; /* Pushes the buttons to the bottom evenly */
+}
+
+/* --- Tech Badges --- */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.tech-tag {
+  background-color: var(--bg-section-alt);
+  color: var(--accent-color); /* Light blue */
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+/* --- Buttons --- */
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-btn {
+  flex: 1;
+  text-align: center;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.btn-live {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn-live:hover {
+  background-color: #2563eb;
+}
+
+.btn-github {
+  background-color: transparent;
+  color: var(--text);
+  border: 1px solid #6b7280;
+}
+
+.btn-github:hover {
+  border-color: var(--border-color);
+  background-color: var(--bg-download);
+}

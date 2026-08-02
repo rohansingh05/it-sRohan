@@ -1,0 +1,146 @@
+/* Contact.css */
+
+.contact-section {
+  background-color: var(--bg-section);
+  color: var(--text);
+  padding: 5rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.contact-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.contact-header p{
+  color: var(--text-muted);
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* --- Left Side: Contact Info --- */
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.contact-info p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+
+
+/* --- Right Side: The Form --- */
+.contact-form {
+  flex: 1.2;
+  background-color: var(--bg-card); /* Slightly lighter box for the form */
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.form-input, 
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--bg-section-alt); /* Dark inputs */
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-textarea {
+  resize: vertical; /* Allows user to pull the text box down */
+  min-height: 120px;
+}
+
+/* The Blue Glow Focus Effect */
+.form-input:focus, 
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.85rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: rgba(59, 130, 246, 0.9);
+}
+
+/* --- Desktop Layout --- */
+@media (min-width: 768px) {
+  .contact-content {
+    flex-direction: row; /* Puts info and form side-by-side */
+  }
+}

@@ -1,0 +1,108 @@
+:root {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --bg-section: #f8fafc;
+  --bg-section-alt: #ffffff;
+  --bg-card: #f4f5f7;
+  --bg-navbar: #ffffff;
+  --bg-hero: linear-gradient(135deg, #eff6ff 0%, #e2e8f0 50%, #cbd5e1 100%);
+  --border-color: #8e48c0;
+  --border-card-hover: rgba(59, 130, 246, 0.4);
+  --accent-color: #3b82f6;
+  --name-color: #2e42f4f0;
+  --bg-download: #c1c2c5;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  --bg-link: rgb(37, 33, 33);
+}
+
+html.light,
+body.light,
+:root {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --bg-section: #f8fafc;
+  --bg-section-alt: #ffffff;
+  --bg-card: #f4f5f7;
+  --bg-navbar: #ffffff;
+  --bg-hero: linear-gradient(135deg, #eff6ff 0%, #e2e8f0 50%, #cbd5e1 100%);
+  --border-color: #8e48c0;
+  --border-card-hover: rgba(59, 130, 246, 0.4);
+  --accent-color: #3b82f6;
+  --name-color: #2e42f4f0;
+  --bg-download: #c1c2c5;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  --bg-link: rgb(37, 33, 33);
+}
+
+html.dark,
+body.dark {
+  --bg: #0f172a;
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+  --bg-section: #111827;
+  --bg-section-alt: #1f2937;
+  --bg-card: #1f2937;
+  --bg-navbar: #111827;
+  --bg-hero: linear-gradient(135deg, #0f172a 0%, #111827 50%, #000000 100%);
+  --border-color: #2a5591;
+  --border-card-hover: rgba(79, 70, 229, 0.25);
+  --accent-color: #5061f5f0;
+  --name-color: #2e42f4f0;
+  --bg-download: #374151;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.5);
+  --bg-link: #d1d5db;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light):not(.dark) {
+    --bg: #0f172a;
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+    --bg-section: #111827;
+    --bg-section-alt: #1f2937;
+    --bg-card: #1f2937;
+    --bg-navbar: #111827;
+    --bg-hero: linear-gradient(135deg, #0f172a 0%, #111827 50%, #000000 100%);
+    --border-color: #334155;
+    --border-card-hover: rgba(79, 70, 229, 0.25);
+    --accent-color: #5061f5f0;
+    --name-color: #2e42f4f0;
+    --bg-download: #374151;
+    --shadow: 0 10px 30px rgba(15, 23, 42, 0.5);
+    --bg-link: #d1d5db;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(99, 102, 241, 0.25);
+}
