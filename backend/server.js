@@ -8,7 +8,7 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:5173',               // Local Vite dev server
   'http://localhost:3000',               // Local React dev server
-  'https://its-rohan-singh.netlify.app'  // Live Netlify URL (NO trailing slash!)
+  'https://it-rohan.netlify.app'  // Live Netlify URL (NO trailing slash!)
 ];
 
 const corsOptions = {
