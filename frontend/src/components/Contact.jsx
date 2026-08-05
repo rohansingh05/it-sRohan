@@ -20,7 +20,7 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const API_URL = 'https://it-srohan-5.onrender.com' || 'http://localhost:5000';
+  const API_URL = 'http://localhost:5000';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -38,6 +38,7 @@ const Contact = () => {
       });
 
       const data = await response.json();
+      console.log(data);
 
       if (response.ok && data.success) {
         setStatusMessage({ text: `Thanks, ${formData.name}! Your message has been sent.`, isError: false });

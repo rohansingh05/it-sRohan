@@ -32,8 +32,10 @@ body.light,
   --accent-color: #3b82f6;
   --name-color: #2e42f4f0;
   --bg-download: #c1c2c5;
+  --bg-dropdown: #ffffff;
   --shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
-  --bg-link: rgb(37, 33, 33);
+  --bg-link: rgb(38, 39, 41);
+  --bg-tablink: rgb(209, 218, 234);
 }
 
 html.dark,
@@ -53,6 +55,8 @@ body.dark {
   --bg-download: #374151;
   --shadow: 0 10px 30px rgba(15, 23, 42, 0.5);
   --bg-link: #d1d5db;
+  --bg-dropdown: #111827;
+  --bg-tablink: rgba(255, 255, 255, 0.05);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -105,4 +109,12 @@ textarea {
 
 ::selection {
   background: rgba(99, 102, 241, 0.25);
+}
+
+/* Mobile: reduce base font-size for better readability on small screens */
+@media (max-width: 600px) {
+  html,
+  body {
+    font-size: 14px;
+  }
 }

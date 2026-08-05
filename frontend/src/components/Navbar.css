@@ -90,7 +90,7 @@
 
 /* Mobile Dropdown Menu */
 .mobile-dropdown {
-  background: rgba(15, 23, 42, 0.95);
+  background: var(--bg-dropdown);
   border: 1px solid rgba(148, 163, 184, 0.22);
   backdrop-filter: blur(18px);
   padding: 1rem 0.75rem;
@@ -134,7 +134,7 @@
   border-radius: 0.85rem;
   color: var(--text);
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--bg-tablink);
   font-weight: 600;
   transition:
     transform 0.2s ease,

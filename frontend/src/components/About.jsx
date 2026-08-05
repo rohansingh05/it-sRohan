@@ -40,7 +40,7 @@ const About = () => {
       content: (
         <p className="about-paragraph">
           Ultimately, my goal is to become a{" "}
-          <span className="highlight-tech">AI Software Engineer</span>. I want
+          <span className="highlight-tech"> Software Engineer</span>. I want
           to build robust, scalable, and impactful digital experiences from the
           database straight to the browser, bridging the gap between heavy logic
           and intuitive design.
