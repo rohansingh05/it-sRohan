@@ -10,7 +10,7 @@ const Projects = () => {
       description: "A robust task management application that allows users to seamlessly add, edit, complete, and delete daily tasks using complex React state management.",
       tech: ["React", "JavaScript", "CSS"],
       liveLink: "https://mytodo-pro.netlify.app/", // Replace '#' with your actual Vercel/Netlify link
-      githubLink: "https://github.com/rohansingh05" // Replace '#' with your GitHub repo link
+      githubLink: "https://github.com/rohansingh05/iTask-todo" // Replace '#' with your GitHub repo link
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ const Projects = () => {
       description: "A fully responsive, custom-built portfolio designed to showcase my web development projects, technical skills, and programming background.",
       tech: ["React", "CSS Grid", "Flexbox"],
       liveLink: "#my-portfolio",
-      githubLink: "https://github.com/rohansingh05"
+      githubLink: "https://github.com/rohansingh05/it-sRohan"
     }
   ];
 
